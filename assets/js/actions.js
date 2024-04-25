@@ -20,8 +20,8 @@ form.addEventListener("submit", function(event){
 
 // Función para validar el RUT
 function validarRut(rut) {
-    // Formato permitido: 12345678-9
-    var rutFormato = /^(\d{8}-\d{1})$/; //formato del RUT
+    // Formato permitido: 12345678-9 o 12345678-K
+    var rutFormato = /^(\d{7,8})-(\d|K)$/; // formato del RUT
     return rutFormato.test(rut.value);
 }
 
